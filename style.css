@@ -1,0 +1,74 @@
+.container-main{
+    margin: 20px auto;
+    max-width: 1440px;
+    min-width: 375px;
+    height: 600px;
+    background-color: hsl(212, 45%, 89%);
+    box-shadow: 10px 16px 10px #21212128;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-card{
+    background-color: hsl(0, 0%, 100%);
+    width: 300px;
+    min-height: 450px;  
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 16px 10px #21212128;
+    transition: transform 0.75s ease-in-out;
+    transform: perspective(500px);
+}
+
+.box2{
+    width: 270px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text1>p{
+    color: black;
+    margin: 20px auto 10px auto;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.text2>p{
+    color: hsl(216, 15%, 48%);
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container-card:hover{
+    transform: perspective(500px) rotate3d(0, 2, -2, 6deg);
+    animation: color-shift 1s ease-in-out infinite alternate;
+
+    /* animation-fill-mode: forwards; giúp giữ nguyên trạng thái khi chạy xong keyframe */
+}
+
+@keyframes hover-card {
+    0%{ background-color: #ffffff;}
+    25%{ background-color: #f9fcd9;}
+    50%{ background-color: #f6ff7e;}
+    75%{ background-color: #f1ff2f;}
+    100%{ background-color: #eeff00;}
+}
+@keyframes color-shift {
+    0% {
+        background: linear-gradient(45deg, #FFD700, #7CFC00);
+    }
+    25% {
+        background: linear-gradient(45deg, #FFEC8B, #98FB98);
+    }
+    50% {
+        background: linear-gradient(45deg, #FFFACD, #7CFC00);
+    }
+    75% {
+        background: linear-gradient(45deg, #7CFC00, #FFD700);
+    }
+    100% {
+        background: linear-gradient(45deg, #FFD700, #7CFC00);
+    }
+}
